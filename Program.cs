@@ -9,6 +9,8 @@ builder.Services.AddDbContext<Context>(options => options.UseInMemoryDatabase("d
 // Remove comment below to use Microsoft SQL Server Express
 //builder.Services.AddDbContext<Context>(options => options.UseSqlServer());
 
+builder.Services.AddScoped<Context, Context>();
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
